@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'main_theme.dart';
-import './showcase/buttons_screen.dart';
+import './screens/buttons_showcase.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,9 +15,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'CR-CRME theme',
       theme: theme,
-      initialRoute: ButtonsScreen.routeName,
+      initialRoute: ButtonsShowcase.routeName,
       routes: {
-        ButtonsScreen.routeName: (context) => const ButtonsScreen(),
+        ButtonsShowcase.routeName: (context) => const ButtonsShowcase(),
       },
     );
   }
