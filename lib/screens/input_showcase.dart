@@ -21,7 +21,7 @@ class _InputShowcaseState extends State<InputShowcase> {
   @override
   Widget build(BuildContext context) {
     return (Scaffold(
-      appBar: AppBar(title: const Text("Form Shwocase")),
+      appBar: AppBar(title: const Text("Input Shwocase")),
       body: Center(
         child: Form(
             key: _formKey,
@@ -30,7 +30,8 @@ class _InputShowcaseState extends State<InputShowcase> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: TextFormField(
-                    decoration: const InputDecoration(labelText: "Email"),
+                    decoration:
+                        const InputDecoration(labelText: "Text Form Field"),
                   ),
                 ),
                 ListTile(
