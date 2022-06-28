@@ -98,6 +98,35 @@ class _InputShowcaseState extends State<InputShowcase> {
                         switchh = v;
                       });
                     }),
+                Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextButton(
+                            onPressed: () {
+                              showDatePicker(
+                                  context: context,
+                                  initialDate: DateTime(2021, 2, 15),
+                                  firstDate: DateTime(2021),
+                                  lastDate: DateTime(2022));
+                            },
+                            child: const Text("Date Picker")),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextButton(
+                            onPressed: () {
+                              showTimePicker(
+                                  context: context,
+                                  initialTime: TimeOfDay.now());
+                            },
+                            child: const Text("Time Picker")),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             )),
       ),

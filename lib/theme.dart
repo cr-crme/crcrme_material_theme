@@ -23,7 +23,7 @@ ThemeData get theme {
         onError: white,
         background: background,
         onBackground: black,
-        surface: blue,
+        surface: white,
         onSurface: black),
     scaffoldBackgroundColor: background,
     checkboxTheme: CheckboxThemeData(
@@ -42,6 +42,7 @@ ThemeData get theme {
         thumbColor: blue,
         activeTrackColor: blue.withAlpha(100),
         inactiveTrackColor: disabled.withAlpha(80)),
+    iconTheme: const IconThemeData(color: blue),
     elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
             textStyle: MaterialStateProperty.all(const TextStyle(fontSize: 20)),

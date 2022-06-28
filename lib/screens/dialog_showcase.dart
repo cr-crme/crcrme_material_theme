@@ -8,14 +8,63 @@ class DialogShowcase extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Input Showcase")),
+      appBar: AppBar(title: const Text("Dialog Showcase")),
       body: Center(
           child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          DatePickerDialog(
-              initialDate: DateTime(2021, 2, 15),
-              firstDate: DateTime(2021),
-              lastDate: DateTime(2022)),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextButton(
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (BuildContext context) => AlertDialog(
+                            title: const Text("Alert Dialog"),
+                            content: const Text(
+                                "Consequatur laudantium nisi odio assumenda. Omnis et nobis ullam impedit. Deleniti ut rem cupiditate qui est porro neque. Deleniti unde deserunt sequi ut doloremque. Et molestiae eos consequatur deleniti eos aut sapiente nesciunt."),
+                            actions: [
+                              TextButton(
+                                  onPressed: () => Navigator.pop(context, "OK"),
+                                  child: const Text("OK"))
+                            ],
+                          ));
+                },
+                child: const Text("Alert Dialog")),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextButton(
+                onPressed: () {
+                  showModalBottomSheet(
+                      context: context,
+                      builder: (BuildContext context) => BottomSheet(
+                          onClosing: () {},
+                          builder: (BuildContext context) => const Padding(
+                                padding: EdgeInsets.all(30.0),
+                                child: Text(
+                                    "Rerum porro ut modi atque cupiditate. Voluptatibus adipisci id veritatis dolore sed placeat molestiae. Officiis assumenda pariatur sit."),
+                              )));
+                },
+                child: const Text("Bottom Sheet")),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextButton(
+                onPressed: () {
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: Row(
+                    children: const [
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Icon(Icons.check),
+                      ),
+                      Text("Enregistré"),
+                    ],
+                  )));
+                },
+                child: const Text("Snack Bar")),
+          ),
         ],
       )),
     );
