@@ -18,17 +18,17 @@ class ButtonShowcase extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(
-                  onPressed: () {}, child: const Text("Vrai bouton flutter")),
+                  onPressed: () {}, child: const Text("Elevated button")),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextButton(
-                  onPressed: () {}, child: const Text("Text button pog")),
+                  onPressed: () {}, child: const Text("Text button")),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: OutlinedButton(
-                  onPressed: () {}, child: const Text("Outlined this time :o")),
+                  onPressed: () {}, child: const Text("Outlined button")),
             ),
           ],
         ),
