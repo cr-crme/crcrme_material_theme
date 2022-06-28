@@ -26,6 +26,12 @@ ThemeData get theme {
         surface: white,
         onSurface: black),
     scaffoldBackgroundColor: background,
+    snackBarTheme: const SnackBarThemeData(
+        actionTextColor: black,
+        behavior: SnackBarBehavior.floating,
+        backgroundColor: orange,
+        contentTextStyle: TextStyle(fontSize: 16),
+        disabledActionTextColor: disabled),
     checkboxTheme: CheckboxThemeData(
         checkColor: MaterialStateProperty.all(white),
         fillColor: MaterialStateProperty.all(blue)),
@@ -42,7 +48,7 @@ ThemeData get theme {
         thumbColor: blue,
         activeTrackColor: blue.withAlpha(100),
         inactiveTrackColor: disabled.withAlpha(80)),
-    iconTheme: const IconThemeData(color: blue),
+    iconTheme: const IconThemeData(color: white),
     progressIndicatorTheme: ProgressIndicatorThemeData(
         color: orange, linearTrackColor: disabled.withAlpha(80)),
     chipTheme: const ChipThemeData(

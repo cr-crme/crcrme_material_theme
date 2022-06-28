@@ -53,15 +53,19 @@ class DialogShowcase extends StatelessWidget {
             child: TextButton(
                 onPressed: () {
                   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                      content: Row(
-                    children: const [
-                      Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Icon(Icons.check),
+                      action: SnackBarAction(
+                        label: "Annuler",
+                        onPressed: () {},
                       ),
-                      Text("Enregistré"),
-                    ],
-                  )));
+                      content: Row(
+                        children: const [
+                          Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Icon(Icons.check),
+                          ),
+                          Text("Enregistré"),
+                        ],
+                      )));
                 },
                 child: const Text("Snack Bar")),
           ),
