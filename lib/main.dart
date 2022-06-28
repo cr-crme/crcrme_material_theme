@@ -1,8 +1,8 @@
-import 'package:crcrme_flutter_template/screens/form_showcase.dart';
+import 'package:crcrme_flutter_template/screens/input_showcase.dart';
+import 'package:crcrme_flutter_template/screens/button_showcase.dart';
 import 'package:flutter/material.dart';
 
-import 'test_theme.dart';
-import './screens/buttons_showcase.dart';
+import 'theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,10 +16,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'CR-CRME theme',
       theme: theme,
-      initialRoute: ButtonsShowcase.routeName,
+      initialRoute: ButtonShowcase.routeName,
       routes: {
-        ButtonsShowcase.routeName: (context) => const ButtonsShowcase(),
-        FormShowcase.routeName: (context) => const FormShowcase(),
+        ButtonShowcase.routeName: (context) => const ButtonShowcase(),
+        InputShowcase.routeName: (context) => const InputShowcase(),
       },
     );
   }

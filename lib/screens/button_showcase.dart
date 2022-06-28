@@ -1,8 +1,8 @@
-import 'package:crcrme_flutter_template/screens/form_showcase.dart';
+import 'package:crcrme_flutter_template/screens/input_showcase.dart';
 import 'package:flutter/material.dart';
 
-class ButtonsShowcase extends StatelessWidget {
-  const ButtonsShowcase({Key? key}) : super(key: key);
+class ButtonShowcase extends StatelessWidget {
+  const ButtonShowcase({Key? key}) : super(key: key);
 
   static const routeName = '/buttons-showcase';
 
@@ -12,6 +12,10 @@ class ButtonsShowcase extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Button showcase'),
       ),
+      drawer: Drawer(
+          child: Column(
+        children: const [Text("data"), Text("data")],
+      )),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -35,7 +39,7 @@ class ButtonsShowcase extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: TextButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, FormShowcase.routeName);
+                    Navigator.pushNamed(context, InputShowcase.routeName);
                   },
                   child: const Text("Navigate to form showcase :)")),
             ),
