@@ -14,6 +14,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   List<bool?> selected = [true, false];
+  int currentStep = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -65,6 +66,7 @@ class _HomeState extends State<Home> {
                           Chip(label: Text("Chip 3"))
                         ],
                       ),
+                      const Divider(),
                       const Padding(
                         padding: EdgeInsets.all(8.0),
                         child: CircularProgressIndicator(),
@@ -72,6 +74,7 @@ class _HomeState extends State<Home> {
                       const LinearProgressIndicator(
                         value: null,
                       ),
+                      const Divider(),
                       DataTable(
                           onSelectAll: (value) {
                             setState(() {
@@ -113,7 +116,33 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
-            )
+            ),
+            Stepper(
+                currentStep: currentStep,
+                onStepContinue: () {
+                  setState(() {
+                    currentStep += 1;
+                  });
+                },
+                onStepCancel: () {
+                  setState(() {
+                    currentStep = 0;
+                  });
+                },
+                steps: const [
+                  Step(
+                      title: Text("Step 1"),
+                      content: Text(
+                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ultrices nisi.")),
+                  Step(
+                      title: Text("Step 2"),
+                      content: Text(
+                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ultrices nisi.")),
+                  Step(
+                      title: Text("Step 3"),
+                      content: Text(
+                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ultrices nisi."))
+                ])
           ],
         )),
       ),
