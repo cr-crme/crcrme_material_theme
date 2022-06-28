@@ -43,6 +43,13 @@ ThemeData get theme {
         activeTrackColor: blue.withAlpha(100),
         inactiveTrackColor: disabled.withAlpha(80)),
     iconTheme: const IconThemeData(color: blue),
+    progressIndicatorTheme: ProgressIndicatorThemeData(
+        color: orange, linearTrackColor: disabled.withAlpha(80)),
+    chipTheme: const ChipThemeData(
+        backgroundColor: blue,
+        disabledColor: disabled,
+        labelPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 2),
+        labelStyle: TextStyle(color: white, fontWeight: FontWeight.w600)),
     elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
             textStyle: MaterialStateProperty.all(const TextStyle(fontSize: 20)),

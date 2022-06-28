@@ -3,10 +3,17 @@ import 'package:crcrme_flutter_template/screens/input_showcase.dart';
 import 'package:crcrme_flutter_template/screens/dialog_showcase.dart';
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
   static const routeName = '/';
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  List<bool?> selected = [true, false];
 
   @override
   Widget build(BuildContext context) {
@@ -35,10 +42,78 @@ class Home extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Center(
             child: Column(
-          children: const [
-            Text(
+          children: [
+            const Text(
                 "Voici une application qui montre tous (presque) les widgets Flutter ainsi que leur theme !"),
-            Text("Naviguez via le Drawer en haut à gauche !")
+            const Text("Naviguez via le Drawer en haut à gauche !"),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Card"),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          Chip(label: Text("Chip 1")),
+                          Chip(label: Text("Chip 2")),
+                          Chip(label: Text("Chip 3"))
+                        ],
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: CircularProgressIndicator(),
+                      ),
+                      const LinearProgressIndicator(
+                        value: null,
+                      ),
+                      DataTable(
+                          onSelectAll: (value) {
+                            setState(() {
+                              selected = [value, value];
+                            });
+                          },
+                          columns: const [
+                            DataColumn(label: Text("Column 1")),
+                            DataColumn(label: Text("Column 2")),
+                            DataColumn(label: Text("Column 3"))
+                          ],
+                          rows: [
+                            DataRow(
+                                selected: selected[0]!,
+                                onSelectChanged: (bool? v) {
+                                  setState(() {
+                                    selected[0] = v;
+                                  });
+                                },
+                                cells: const [
+                                  DataCell(Text("Cell 1-1")),
+                                  DataCell(Text("Cell 1-2")),
+                                  DataCell(Text("Cell 1-3"))
+                                ]),
+                            DataRow(
+                                selected: selected[1]!,
+                                onSelectChanged: (bool? v) {
+                                  setState(() {
+                                    selected[1] = v;
+                                  });
+                                },
+                                cells: const [
+                                  DataCell(Text("Cell 2-1")),
+                                  DataCell(Text("Cell 2-2")),
+                                  DataCell(Text("Cell 2-3"))
+                                ])
+                          ])
+                    ],
+                  ),
+                ),
+              ),
+            )
           ],
         )),
       ),
