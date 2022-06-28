@@ -21,7 +21,7 @@ class _InputShowcaseState extends State<InputShowcase> {
   @override
   Widget build(BuildContext context) {
     return (Scaffold(
-      appBar: AppBar(title: const Text("Input Shwocase")),
+      appBar: AppBar(title: const Text("Input Showcase")),
       body: Center(
         child: Form(
             key: _formKey,
