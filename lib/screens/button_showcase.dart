@@ -1,4 +1,3 @@
-import 'package:crcrme_flutter_template/screens/input_showcase.dart';
 import 'package:flutter/material.dart';
 
 class ButtonShowcase extends StatelessWidget {
@@ -12,10 +11,6 @@ class ButtonShowcase extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Button showcase'),
       ),
-      drawer: Drawer(
-          child: Column(
-        children: const [Text("data"), Text("data")],
-      )),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -34,14 +29,6 @@ class ButtonShowcase extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: OutlinedButton(
                   onPressed: () {}, child: const Text("Outlined this time :o")),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, InputShowcase.routeName);
-                  },
-                  child: const Text("Navigate to form showcase :)")),
             ),
           ],
         ),
