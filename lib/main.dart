@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'CR-CRME theme',
-      theme: theme,
+      theme: crcrmeMaterialTheme,
       initialRoute: Home.routeName,
       routes: {
         Home.routeName: (context) => const Home(),

@@ -9,7 +9,7 @@ const Color orange = Color(0xFFFEAE49);
 const Color background = Color(0xFFFAFAFA);
 const Color error = Color(0xFFF02010);
 
-ThemeData get theme {
+ThemeData get crcrmeMaterialTheme {
   return ThemeData(
     fontFamily: "Noto Sans",
     brightness: Brightness.light,
