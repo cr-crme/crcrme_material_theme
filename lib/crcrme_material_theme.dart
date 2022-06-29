@@ -11,7 +11,7 @@ const Color error = Color(0xFFF02010);
 
 ThemeData get theme {
   return ThemeData(
-    fontFamily: "Open Sans",
+    fontFamily: "Noto Sans",
     brightness: Brightness.light,
     colorScheme: const ColorScheme(
         brightness: Brightness.light,

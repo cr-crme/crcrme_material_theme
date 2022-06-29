@@ -15,4 +15,4 @@ Simple value inputs :
 
 ## Usage
 
-    pub get crcrme_flutter_template
+    pub get crcrme_material_theme

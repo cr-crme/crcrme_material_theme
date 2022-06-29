@@ -1,0 +1,12 @@
+.dart_tool/
+android/
+build/
+ios/
+linux/
+macos/
+web/
+windows/
+
+lib/screens/
+lib/main.dart
+analysis_options.yaml

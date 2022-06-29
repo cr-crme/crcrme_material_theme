@@ -1,10 +1,9 @@
-import 'package:crcrme_flutter_template/screens/home.dart';
-import 'package:crcrme_flutter_template/screens/button_showcase.dart';
-import 'package:crcrme_flutter_template/screens/input_showcase.dart';
-import 'package:crcrme_flutter_template/screens/dialog_showcase.dart';
+import 'package:crcrme_material_theme/screens/home.dart';
+import 'package:crcrme_material_theme/screens/button_showcase.dart';
+import 'package:crcrme_material_theme/screens/input_showcase.dart';
+import 'package:crcrme_material_theme/screens/dialog_showcase.dart';
+import 'package:crcrme_material_theme/crcrme_material_theme.dart';
 import 'package:flutter/material.dart';
-
-import 'theme.dart';
 
 void main() {
   runApp(const MyApp());
