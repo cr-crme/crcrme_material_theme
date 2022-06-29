@@ -39,7 +39,7 @@ class _HomeState extends State<Home> {
           ),
         ],
       )),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(8.0),
         child: Center(
             child: Column(
