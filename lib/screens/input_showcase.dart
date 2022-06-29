@@ -12,11 +12,11 @@ class InputShowcase extends StatefulWidget {
 class _InputShowcaseState extends State<InputShowcase> {
   final _formKey = GlobalKey<FormState>();
 
-  String dropdownValue = "Photo";
-  bool? isChecked = false;
-  bool? radio = false;
-  double slider = 10;
-  bool switchh = false;
+  String _dropdownValue = "Photo";
+  bool _checkbox = false;
+  bool _radio = false;
+  double _slider = 10;
+  bool _switchh = false;
 
   @override
   Widget build(BuildContext context) {
@@ -37,12 +37,12 @@ class _InputShowcaseState extends State<InputShowcase> {
                 ListTile(
                   title: const Text("Dropdown Button"),
                   trailing: DropdownButton<String>(
-                    value: dropdownValue,
+                    value: _dropdownValue,
                     icon: const Icon(Icons.arrow_downward),
                     elevation: 16,
                     onChanged: (String? newValue) {
                       setState(() {
-                        dropdownValue = newValue!;
+                        _dropdownValue = newValue!;
                       });
                     },
                     items: <String>['Photo', 'Texte', 'Photo et Texte']
@@ -56,35 +56,35 @@ class _InputShowcaseState extends State<InputShowcase> {
                 ),
                 CheckboxListTile(
                     title: const Text("Checkbox!"),
-                    value: isChecked,
+                    value: _checkbox,
                     onChanged: (bool? v) {
                       setState(() {
-                        isChecked = v;
+                        _checkbox = v!;
                       });
                     }),
                 RadioListTile(
                     title: const Text("Radio 1"),
                     value: false,
-                    groupValue: radio,
+                    groupValue: _radio,
                     onChanged: (bool? v) {
                       setState(() {
-                        radio = v;
+                        _radio = v!;
                       });
                     }),
                 RadioListTile(
                     title: const Text("Radio 2"),
                     value: true,
-                    groupValue: radio,
+                    groupValue: _radio,
                     onChanged: (bool? v) {
                       setState(() {
-                        radio = v;
+                        _radio = v!;
                       });
                     }),
                 Slider(
-                  value: slider,
+                  value: _slider,
                   onChanged: (double v) {
                     setState(() {
-                      slider = v;
+                      _slider = v;
                     });
                   },
                   min: 0,
@@ -92,10 +92,10 @@ class _InputShowcaseState extends State<InputShowcase> {
                 ),
                 SwitchListTile(
                     title: const Text("Switch"),
-                    value: switchh,
+                    value: _switchh,
                     onChanged: (bool v) {
                       setState(() {
-                        switchh = v;
+                        _switchh = v;
                       });
                     }),
                 Center(

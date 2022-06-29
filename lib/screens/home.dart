@@ -13,8 +13,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  List<bool?> selected = [true, false];
-  int currentStep = 0;
+  List<bool> _selected = [true, false];
+  int _currentStep = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +78,7 @@ class _HomeState extends State<Home> {
                       DataTable(
                           onSelectAll: (value) {
                             setState(() {
-                              selected = [value, value];
+                              _selected = [value!, value];
                             });
                           },
                           columns: const [
@@ -88,10 +88,10 @@ class _HomeState extends State<Home> {
                           ],
                           rows: [
                             DataRow(
-                                selected: selected[0]!,
+                                selected: _selected[0],
                                 onSelectChanged: (bool? v) {
                                   setState(() {
-                                    selected[0] = v;
+                                    _selected[0] = v!;
                                   });
                                 },
                                 cells: const [
@@ -100,10 +100,10 @@ class _HomeState extends State<Home> {
                                   DataCell(Text("Cell 1-3"))
                                 ]),
                             DataRow(
-                                selected: selected[1]!,
+                                selected: _selected[1],
                                 onSelectChanged: (bool? v) {
                                   setState(() {
-                                    selected[1] = v;
+                                    _selected[1] = v!;
                                   });
                                 },
                                 cells: const [
@@ -118,15 +118,15 @@ class _HomeState extends State<Home> {
               ),
             ),
             Stepper(
-                currentStep: currentStep,
+                currentStep: _currentStep,
                 onStepContinue: () {
                   setState(() {
-                    currentStep += 1;
+                    _currentStep += 1;
                   });
                 },
                 onStepCancel: () {
                   setState(() {
-                    currentStep = 0;
+                    _currentStep = 0;
                   });
                 },
                 steps: const [
