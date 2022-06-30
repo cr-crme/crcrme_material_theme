@@ -1,9 +1,10 @@
-import 'package:crcrme_material_theme/screens/home.dart';
-import 'package:crcrme_material_theme/screens/button_showcase.dart';
-import 'package:crcrme_material_theme/screens/input_showcase.dart';
-import 'package:crcrme_material_theme/screens/dialog_showcase.dart';
 import 'package:crcrme_material_theme/crcrme_material_theme.dart';
 import 'package:flutter/material.dart';
+
+import './screens/home.dart';
+import './screens/button_showcase.dart';
+import './screens/input_showcase.dart';
+import './screens/dialog_showcase.dart';
 
 void main() {
   runApp(const MyApp());
