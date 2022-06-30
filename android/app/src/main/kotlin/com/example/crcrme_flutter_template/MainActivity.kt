@@ -1,4 +1,4 @@
-package com.example.crcrme_flutter_template
+package com.example.crcrme_material_theme
 
 import io.flutter.embedding.android.FlutterActivity
 

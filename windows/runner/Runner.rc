@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "crcrme_flutter_template" "\0"
+            VALUE "FileDescription", "crcrme_material_theme" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "crcrme_flutter_template" "\0"
+            VALUE "InternalName", "crcrme_material_theme" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2022 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "crcrme_flutter_template.exe" "\0"
-            VALUE "ProductName", "crcrme_flutter_template" "\0"
+            VALUE "OriginalFilename", "crcrme_material_theme.exe" "\0"
+            VALUE "ProductName", "crcrme_material_theme" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

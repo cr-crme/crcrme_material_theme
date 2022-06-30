@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.crcrme_flutter_template">
+    package="com.example.crcrme_material_theme">
    <application
-        android:label="crcrme_flutter_template"
+        android:label="crcrme_material_theme"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
