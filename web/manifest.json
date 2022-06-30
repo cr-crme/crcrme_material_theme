@@ -1,6 +1,6 @@
 {
-    "name": "crcrme_flutter_template",
-    "short_name": "crcrme_flutter_template",
+    "name": "crcrme_material_theme",
+    "short_name": "crcrme_material_theme",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
