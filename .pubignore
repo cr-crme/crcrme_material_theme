@@ -7,6 +7,6 @@ macos/
 web/
 windows/
 
-lib/screens/
-lib/main.dart
+example/
+
 analysis_options.yaml
