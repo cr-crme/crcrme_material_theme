@@ -32,6 +32,8 @@ ThemeData get crcrmeMaterialTheme {
         backgroundColor: orange,
         contentTextStyle: TextStyle(fontSize: 16),
         disabledActionTextColor: disabled),
+    dividerTheme: const DividerThemeData(
+        color: orange, thickness: 1, indent: 10, endIndent: 10, space: 30),
     checkboxTheme: CheckboxThemeData(
         checkColor: MaterialStateProperty.all(white),
         fillColor: MaterialStateProperty.all(blue)),
