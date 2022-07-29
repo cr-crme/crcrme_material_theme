@@ -11,7 +11,8 @@ const Color error = Color(0xFFF02010);
 
 ThemeData get crcrmeMaterialTheme {
   return ThemeData(
-    fontFamily: "Noto Sans",
+    fontFamily:
+        "Noto Sans", // TODO: Verify it applies to the projects its imported into
     brightness: Brightness.light,
     colorScheme: const ColorScheme(
         brightness: Brightness.light,
@@ -26,9 +27,15 @@ ThemeData get crcrmeMaterialTheme {
         surface: white,
         onSurface: black),
     primaryColor: blue,
-    textTheme: TextTheme(
-        headlineSmall:
-            ThemeData().textTheme.headlineSmall!.copyWith(color: blue)),
+    errorColor: error,
+    disabledColor: disabled,
+    backgroundColor: background,
+    textTheme: ThemeData()
+        .textTheme
+        .apply(displayColor: blue, bodyColor: black)
+        .copyWith(
+            headlineSmall:
+                ThemeData().textTheme.headlineSmall!.copyWith(color: blue)),
     scaffoldBackgroundColor: background,
     snackBarTheme: const SnackBarThemeData(
         actionTextColor: black,
