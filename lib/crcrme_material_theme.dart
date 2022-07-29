@@ -34,8 +34,10 @@ ThemeData get crcrmeMaterialTheme {
         .textTheme
         .apply(displayColor: blue, bodyColor: black)
         .copyWith(
-            headlineSmall:
-                ThemeData().textTheme.headlineSmall!.copyWith(color: blue)),
+          headlineSmall:
+              ThemeData().textTheme.headlineSmall!.copyWith(color: blue),
+          titleLarge: ThemeData().textTheme.titleLarge!.copyWith(color: blue),
+        ),
     scaffoldBackgroundColor: background,
     snackBarTheme: const SnackBarThemeData(
         actionTextColor: black,
