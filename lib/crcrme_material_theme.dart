@@ -39,6 +39,17 @@ ThemeData get crcrmeMaterialTheme {
           titleLarge: ThemeData().textTheme.titleLarge!.copyWith(color: blue),
         ),
     scaffoldBackgroundColor: background,
+    tabBarTheme: TabBarTheme(
+      labelColor: white,
+      indicator: const UnderlineTabIndicator(
+        borderSide: BorderSide(
+          color: white,
+          width: 3,
+        ),
+      ),
+      unselectedLabelColor: white.withAlpha(220),
+      indicatorSize: TabBarIndicatorSize.tab,
+    ),
     snackBarTheme: const SnackBarThemeData(
         actionTextColor: black,
         behavior: SnackBarBehavior.floating,
