@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.crcrme_material_theme">
+    package="ca.crcrme.material_theme">
    <application
         android:label="crcrme_material_theme"
         android:name="${applicationName}"
