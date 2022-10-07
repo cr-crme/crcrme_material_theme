@@ -5,7 +5,7 @@ import './input_showcase.dart';
 import './dialog_showcase.dart';
 
 class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+  const Home({super.key});
 
   static const routeName = '/';
 

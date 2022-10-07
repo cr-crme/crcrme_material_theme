@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ButtonShowcase extends StatelessWidget {
-  const ButtonShowcase({Key? key}) : super(key: key);
+  const ButtonShowcase({super.key});
 
   static const routeName = '/button-showcase';
 

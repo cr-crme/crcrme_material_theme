@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DialogShowcase extends StatelessWidget {
-  const DialogShowcase({Key? key}) : super(key: key);
+  const DialogShowcase({super.key});
 
   static const routeName = '/dialog-showcase';
 
