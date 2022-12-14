@@ -95,5 +95,15 @@ ThemeData get crcrmeMaterialTheme {
             elevation: MaterialStateProperty.all(0))),
     floatingActionButtonTheme:
         const FloatingActionButtonThemeData(foregroundColor: white),
-  );
+        textTheme: const TextTheme(
+          titleLarge: TextStyle(color: Colors.blue),
+          headlineMedium: TextStyle(
+              color: Color.fromARGB(255, 1, 1, 1),
+              fontWeight: FontWeight.bold,
+              fontSize: 20),
+          headlineSmall: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Color.fromARGB(255, 190, 77, 81),
+              fontSize: 16)));
+  
 }
