@@ -11,7 +11,8 @@ const Color error = Color(0xFFF02010);
 
 ThemeData get crcrmeMaterialTheme {
   return ThemeData(
-    fontFamily: "Noto Sans",
+    fontFamily:
+        "Noto Sans", // TODO: Verify it applies to the projects its imported into
     brightness: Brightness.light,
     colorScheme: const ColorScheme(
         brightness: Brightness.light,
@@ -25,13 +26,38 @@ ThemeData get crcrmeMaterialTheme {
         onBackground: black,
         surface: white,
         onSurface: black),
+    primaryColor: blue,
+    errorColor: error,
+    disabledColor: disabled,
+    backgroundColor: background,
+    textTheme: ThemeData()
+        .textTheme
+        .apply(displayColor: blue, bodyColor: black)
+        .copyWith(
+          headlineSmall:
+              ThemeData().textTheme.headlineSmall!.copyWith(color: blue),
+          titleLarge: ThemeData().textTheme.titleLarge!.copyWith(color: blue),
+        ),
     scaffoldBackgroundColor: background,
+    tabBarTheme: TabBarTheme(
+      labelColor: white,
+      indicator: const UnderlineTabIndicator(
+        borderSide: BorderSide(
+          color: white,
+          width: 3,
+        ),
+      ),
+      unselectedLabelColor: white.withAlpha(220),
+      indicatorSize: TabBarIndicatorSize.tab,
+    ),
     snackBarTheme: const SnackBarThemeData(
         actionTextColor: black,
         behavior: SnackBarBehavior.floating,
         backgroundColor: orange,
         contentTextStyle: TextStyle(fontSize: 16),
         disabledActionTextColor: disabled),
+    dividerTheme: const DividerThemeData(
+        color: orange, thickness: 1, indent: 10, endIndent: 10, space: 30),
     checkboxTheme: CheckboxThemeData(
         checkColor: MaterialStateProperty.all(white),
         fillColor: MaterialStateProperty.all(blue)),
@@ -95,15 +121,5 @@ ThemeData get crcrmeMaterialTheme {
             elevation: MaterialStateProperty.all(0))),
     floatingActionButtonTheme:
         const FloatingActionButtonThemeData(foregroundColor: white),
-        textTheme: const TextTheme(
-          titleLarge: TextStyle(color: Colors.blue),
-          headlineMedium: TextStyle(
-              color: Color.fromARGB(255, 1, 1, 1),
-              fontWeight: FontWeight.bold,
-              fontSize: 20),
-          headlineSmall: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Color.fromARGB(255, 190, 77, 81),
-              fontSize: 16)));
-  
+  );
 }

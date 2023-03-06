@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class InputShowcase extends StatefulWidget {
-  const InputShowcase({Key? key}) : super(key: key);
+  const InputShowcase({super.key});
 
   static const routeName = '/form-showcase';
 

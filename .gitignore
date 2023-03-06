@@ -47,3 +47,11 @@ app.*.map.json
 /android/app/release
 
 pubspec.lock
+lib/main.dart
+test/
+android/
+windows/
+linux/
+web/
+macos/
+ios/

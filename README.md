@@ -27,7 +27,7 @@ Then, import and use the theme in your MaterialApp widget :
 import 'package:crcrme_material_theme/crcrme_material_theme.dart';
 
 class MyApp extends StatelessWidget {
-    const MyApp({Key? key}) : super(key: key);
+    const MyApp({super.key});
 
     @override
     Widget build(BuildContext context) {
