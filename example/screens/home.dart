@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import './button_showcase.dart';
-import './input_showcase.dart';
-import './dialog_showcase.dart';
+import 'button_showcase.dart';
+import 'dialog_showcase.dart';
+import 'input_showcase.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
