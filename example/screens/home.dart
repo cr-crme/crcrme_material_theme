@@ -22,7 +22,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("CR CRME Flutter Template"),
+        title: const Text('CR CRME Flutter Template'),
         actions: [
           IconButton(
             icon: const Icon(Icons.search),
@@ -38,17 +38,17 @@ class _HomeState extends State<Home> {
               body: Column(
                 children: [
                   ListTile(
-                    title: const Text("Button Showcase"),
+                    title: const Text('Button Showcase'),
                     onTap: () =>
                         Navigator.pushNamed(context, ButtonShowcase.routeName),
                   ),
                   ListTile(
-                    title: const Text("Input Showcase"),
+                    title: const Text('Input Showcase'),
                     onTap: () =>
                         Navigator.pushNamed(context, InputShowcase.routeName),
                   ),
                   ListTile(
-                    title: const Text("Dialog Showcase"),
+                    title: const Text('Dialog Showcase'),
                     onTap: () =>
                         Navigator.pushNamed(context, DialogShowcase.routeName),
                   ),
@@ -60,8 +60,8 @@ class _HomeState extends State<Home> {
             child: Column(
           children: [
             const Text(
-                "Voici une application qui montre tous (presque) les widgets Flutter ainsi que leur theme !"),
-            const Text("Naviguez via le Drawer en haut à gauche !"),
+                'Voici une application qui montre tous (presque) les widgets Flutter ainsi que leur theme !'),
+            const Text('Naviguez via le Drawer en haut à gauche !'),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: ExpansionPanelList(
@@ -75,13 +75,13 @@ class _HomeState extends State<Home> {
                         isExpanded: expansionPanel,
                         canTapOnHeader: true,
                         headerBuilder: (BuildContext context, bool open) =>
-                            const Text("Expansion Panel List"),
+                            const Text('Expansion Panel List'),
                         body: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: const [
-                            Chip(label: Text("Chip 1")),
-                            Chip(label: Text("Chip 2")),
-                            Chip(label: Text("Chip 3"))
+                            Chip(label: Text('Chip 1')),
+                            Chip(label: Text('Chip 2')),
+                            Chip(label: Text('Chip 3'))
                           ],
                         ))
                   ]),
@@ -95,7 +95,7 @@ class _HomeState extends State<Home> {
                     children: const [
                       Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text("Card"),
+                        child: Text('Card'),
                       ),
                       Divider(),
                       Padding(
@@ -119,11 +119,11 @@ class _HomeState extends State<Home> {
                     });
                   },
                   columns: const [
-                    DataColumn(label: Text("Column 1")),
-                    DataColumn(label: Text("Column 2")),
-                    DataColumn(label: Text("Column 3")),
-                    DataColumn(label: Text("Column 4")),
-                    DataColumn(label: Text("Column 5"))
+                    DataColumn(label: Text('Column 1')),
+                    DataColumn(label: Text('Column 2')),
+                    DataColumn(label: Text('Column 3')),
+                    DataColumn(label: Text('Column 4')),
+                    DataColumn(label: Text('Column 5'))
                   ],
                   rows: [
                     DataRow(
@@ -134,11 +134,11 @@ class _HomeState extends State<Home> {
                           });
                         },
                         cells: const [
-                          DataCell(Text("Cell 1-1")),
-                          DataCell(Text("Cell 1-2")),
-                          DataCell(Text("Cell 1-3")),
-                          DataCell(Text("Cell 1-4")),
-                          DataCell(Text("Cell 1-5"))
+                          DataCell(Text('Cell 1-1')),
+                          DataCell(Text('Cell 1-2')),
+                          DataCell(Text('Cell 1-3')),
+                          DataCell(Text('Cell 1-4')),
+                          DataCell(Text('Cell 1-5'))
                         ]),
                     DataRow(
                         selected: _selected[1],
@@ -148,11 +148,11 @@ class _HomeState extends State<Home> {
                           });
                         },
                         cells: const [
-                          DataCell(Text("Cell 2-1")),
-                          DataCell(Text("Cell 2-2")),
-                          DataCell(Text("Cell 2-3")),
-                          DataCell(Text("Cell 2-4")),
-                          DataCell(Text("Cell 2-5"))
+                          DataCell(Text('Cell 2-1')),
+                          DataCell(Text('Cell 2-2')),
+                          DataCell(Text('Cell 2-3')),
+                          DataCell(Text('Cell 2-4')),
+                          DataCell(Text('Cell 2-5'))
                         ])
                   ]),
             ),
@@ -170,17 +170,17 @@ class _HomeState extends State<Home> {
                 },
                 steps: const [
                   Step(
-                      title: Text("Step 1"),
+                      title: Text('Step 1'),
                       content: Text(
-                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ultrices nisi.")),
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ultrices nisi.')),
                   Step(
-                      title: Text("Step 2"),
+                      title: Text('Step 2'),
                       content: Text(
-                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ultrices nisi.")),
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ultrices nisi.')),
                   Step(
-                      title: Text("Step 3"),
+                      title: Text('Step 3'),
                       content: Text(
-                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ultrices nisi."))
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ultrices nisi.'))
                 ])
           ],
         )),
@@ -192,14 +192,14 @@ class _HomeState extends State<Home> {
 class CustomSearchDelegate extends SearchDelegate {
 // Demo list to show querying
   List<String> searchTerms = [
-    "Apple",
-    "Banana",
-    "Mango",
-    "Pear",
-    "Watermelons",
-    "Blueberries",
-    "Pineapples",
-    "Strawberries"
+    'Apple',
+    'Banana',
+    'Mango',
+    'Pear',
+    'Watermelons',
+    'Blueberries',
+    'Pineapples',
+    'Strawberries'
   ];
 
 // first overwrite to
