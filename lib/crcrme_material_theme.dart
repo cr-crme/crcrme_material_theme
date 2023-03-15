@@ -12,7 +12,7 @@ const Color error = Color(0xFFF02010);
 ThemeData get crcrmeMaterialTheme {
   return ThemeData(
     fontFamily:
-        "Noto Sans", // TODO: Verify it applies to the projects its imported into
+        'Noto Sans', // TODO: Verify it applies to the projects its imported into
     brightness: Brightness.light,
     colorScheme: const ColorScheme(
         brightness: Brightness.light,
