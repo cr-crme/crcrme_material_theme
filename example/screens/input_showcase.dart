@@ -12,7 +12,7 @@ class InputShowcase extends StatefulWidget {
 class _InputShowcaseState extends State<InputShowcase> {
   final _formKey = GlobalKey<FormState>();
 
-  String _dropdownValue = "Photo";
+  String _dropdownValue = 'Photo';
   bool _checkbox = false;
   bool _radio = false;
   double _slider = 10;
@@ -21,7 +21,7 @@ class _InputShowcaseState extends State<InputShowcase> {
   @override
   Widget build(BuildContext context) {
     return (Scaffold(
-      appBar: AppBar(title: const Text("Input Showcase")),
+      appBar: AppBar(title: const Text('Input Showcase')),
       body: Center(
         child: Form(
             key: _formKey,
@@ -31,11 +31,11 @@ class _InputShowcaseState extends State<InputShowcase> {
                   padding: const EdgeInsets.all(8.0),
                   child: TextFormField(
                     decoration:
-                        const InputDecoration(labelText: "Text Form Field"),
+                        const InputDecoration(labelText: 'Text Form Field'),
                   ),
                 ),
                 ListTile(
-                  title: const Text("Dropdown Button"),
+                  title: const Text('Dropdown Button'),
                   trailing: DropdownButton<String>(
                     value: _dropdownValue,
                     icon: const Icon(Icons.arrow_downward),
@@ -55,7 +55,7 @@ class _InputShowcaseState extends State<InputShowcase> {
                   ),
                 ),
                 CheckboxListTile(
-                    title: const Text("Checkbox!"),
+                    title: const Text('Checkbox!'),
                     value: _checkbox,
                     onChanged: (bool? v) {
                       setState(() {
@@ -63,7 +63,7 @@ class _InputShowcaseState extends State<InputShowcase> {
                       });
                     }),
                 RadioListTile(
-                    title: const Text("Radio 1"),
+                    title: const Text('Radio 1'),
                     value: false,
                     groupValue: _radio,
                     onChanged: (bool? v) {
@@ -72,7 +72,7 @@ class _InputShowcaseState extends State<InputShowcase> {
                       });
                     }),
                 RadioListTile(
-                    title: const Text("Radio 2"),
+                    title: const Text('Radio 2'),
                     value: true,
                     groupValue: _radio,
                     onChanged: (bool? v) {
@@ -91,7 +91,7 @@ class _InputShowcaseState extends State<InputShowcase> {
                   max: 100,
                 ),
                 SwitchListTile(
-                    title: const Text("Switch"),
+                    title: const Text('Switch'),
                     value: _switchh,
                     onChanged: (bool v) {
                       setState(() {
@@ -112,7 +112,7 @@ class _InputShowcaseState extends State<InputShowcase> {
                                   firstDate: DateTime(2021),
                                   lastDate: DateTime(2022));
                             },
-                            child: const Text("Date Picker")),
+                            child: const Text('Date Picker')),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -122,7 +122,7 @@ class _InputShowcaseState extends State<InputShowcase> {
                                   context: context,
                                   initialTime: TimeOfDay.now());
                             },
-                            child: const Text("Time Picker")),
+                            child: const Text('Time Picker')),
                       ),
                     ],
                   ),

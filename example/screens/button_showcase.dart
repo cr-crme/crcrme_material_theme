@@ -18,17 +18,17 @@ class ButtonShowcase extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(
-                  onPressed: () {}, child: const Text("Elevated button")),
+                  onPressed: () {}, child: const Text('Elevated button')),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextButton(
-                  onPressed: () {}, child: const Text("Text button")),
+                  onPressed: () {}, child: const Text('Text button')),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: OutlinedButton(
-                  onPressed: () {}, child: const Text("Outlined button")),
+                  onPressed: () {}, child: const Text('Outlined button')),
             ),
           ],
         ),
