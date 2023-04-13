@@ -4,10 +4,10 @@ const Color white = Color(0xFFFFFFFF);
 const Color black = Color(0xFF1c0f13);
 const Color gray = Color(0xFF3D424A);
 const Color disabled = Color(0xFF9CA1AA);
-const Color blue = Color(0xFF57B0FA);
-const Color orange = Color(0xFFFAA200);
+const Color blue = Color(0xFF357a97);
+const Color orange = Color(0xFFC75205);
 const Color background = Color(0xFFFAFAFA);
-const Color error = Color(0xFFF02010);
+const Color error = Color(0xFFF62828);
 
 ThemeData get crcrmeMaterialTheme {
   return ThemeData(
@@ -51,7 +51,7 @@ ThemeData get crcrmeMaterialTheme {
     snackBarTheme: const SnackBarThemeData(
         actionTextColor: black,
         behavior: SnackBarBehavior.floating,
-        backgroundColor: orange,
+        backgroundColor: gray,
         contentTextStyle: TextStyle(fontSize: 16),
         disabledActionTextColor: disabled),
     dividerTheme: const DividerThemeData(
