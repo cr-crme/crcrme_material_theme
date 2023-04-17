@@ -32,42 +32,68 @@ ThemeData get crcrmeMaterialTheme {
         .textTheme
         .apply(displayColor: blue, bodyColor: black)
         .copyWith(
-          headlineSmall: GoogleFonts.openSans(
-              textStyle:
-                  ThemeData().textTheme.headlineSmall!.copyWith(color: blue)),
           headlineLarge: GoogleFonts.openSans(
-              textStyle:
-                  ThemeData().textTheme.headlineLarge!.copyWith(color: blue)),
-          headlineMedium: GoogleFonts.openSans(
-              textStyle:
-                  ThemeData().textTheme.headlineLarge!.copyWith(color: blue)),
+              textStyle: ThemeData()
+                  .textTheme
+                  .headlineLarge!
+                  .copyWith(color: blue)
+                  .copyWith(fontWeight: FontWeight.w600)),
           titleLarge: GoogleFonts.openSans(
-              textStyle:
-                  ThemeData().textTheme.titleLarge!.copyWith(color: blue)),
+              textStyle: ThemeData()
+                  .textTheme
+                  .titleLarge!
+                  .copyWith(color: blue)
+                  .copyWith(fontWeight: FontWeight.w600)),
+          headlineSmall: GoogleFonts.openSans(
+              textStyle: ThemeData()
+                  .textTheme
+                  .headlineSmall!
+                  .copyWith(fontWeight: FontWeight.w600)),
+          headlineMedium: GoogleFonts.openSans(
+              textStyle: ThemeData()
+                  .textTheme
+                  .headlineMedium!
+                  .copyWith(fontWeight: FontWeight.w600)),
           titleMedium: GoogleFonts.openSans(
-              textStyle:
-                  ThemeData().textTheme.headlineLarge!.copyWith(color: blue)),
+              textStyle: ThemeData()
+                  .textTheme
+                  .titleMedium!
+                  .copyWith(fontWeight: FontWeight.w600)),
           titleSmall: GoogleFonts.openSans(
-              textStyle:
-                  ThemeData().textTheme.headlineLarge!.copyWith(color: blue)),
+              textStyle: ThemeData()
+                  .textTheme
+                  .titleSmall!
+                  .copyWith(fontWeight: FontWeight.w600)),
           bodyLarge: GoogleFonts.openSans(
-              textStyle:
-                  ThemeData().textTheme.titleLarge!.copyWith(color: blue)),
+              textStyle: ThemeData()
+                  .textTheme
+                  .bodyLarge!
+                  .copyWith(fontWeight: FontWeight.w400)),
           bodyMedium: GoogleFonts.openSans(
-              textStyle:
-                  ThemeData().textTheme.titleLarge!.copyWith(color: blue)),
+              textStyle: ThemeData()
+                  .textTheme
+                  .bodyMedium!
+                  .copyWith(fontWeight: FontWeight.w400)),
           bodySmall: GoogleFonts.openSans(
-              textStyle:
-                  ThemeData().textTheme.titleLarge!.copyWith(color: blue)),
+              textStyle: ThemeData()
+                  .textTheme
+                  .bodySmall!
+                  .copyWith(fontWeight: FontWeight.w400)),
           labelLarge: GoogleFonts.openSans(
-              textStyle:
-                  ThemeData().textTheme.titleLarge!.copyWith(color: blue)),
+              textStyle: ThemeData()
+                  .textTheme
+                  .labelLarge!
+                  .copyWith(fontWeight: FontWeight.w400)),
           labelMedium: GoogleFonts.openSans(
-              textStyle:
-                  ThemeData().textTheme.titleLarge!.copyWith(color: blue)),
+              textStyle: ThemeData()
+                  .textTheme
+                  .labelMedium!
+                  .copyWith(fontWeight: FontWeight.w400)),
           labelSmall: GoogleFonts.openSans(
-              textStyle:
-                  ThemeData().textTheme.titleLarge!.copyWith(color: blue)),
+              textStyle: ThemeData()
+                  .textTheme
+                  .labelSmall!
+                  .copyWith(fontWeight: FontWeight.w400)),
         ),
     scaffoldBackgroundColor: background,
     tabBarTheme: TabBarTheme(
