@@ -17,12 +17,3 @@ dev_dependencies:
 
 flutter:
     uses-material-design: true
-    fonts:
-        - family: Noto Sans
-          fonts:
-              - asset: fonts/NotoSans-Regular.ttf
-              - asset: fonts/NotoSans-Italic.ttf
-                style: italic
-              - asset: fonts/NotoSans-Bold.ttf
-              - asset: fonts/NotoSans-BoldItalic.ttf
-                style: italic

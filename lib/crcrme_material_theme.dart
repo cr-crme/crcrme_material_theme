@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 const Color white = Color(0xFFFFFFFF);
 const Color black = Color(0xFF1c0f13);
@@ -11,7 +12,6 @@ const Color error = Color(0xFFF62828);
 
 ThemeData get crcrmeMaterialTheme {
   return ThemeData(
-    fontFamily: 'Noto Sans',
     brightness: Brightness.light,
     colorScheme: const ColorScheme(
       brightness: Brightness.light,
@@ -32,9 +32,42 @@ ThemeData get crcrmeMaterialTheme {
         .textTheme
         .apply(displayColor: blue, bodyColor: black)
         .copyWith(
-          headlineSmall:
-              ThemeData().textTheme.headlineSmall!.copyWith(color: blue),
-          titleLarge: ThemeData().textTheme.titleLarge!.copyWith(color: blue),
+          headlineSmall: GoogleFonts.openSans(
+              textStyle:
+                  ThemeData().textTheme.headlineSmall!.copyWith(color: blue)),
+          headlineLarge: GoogleFonts.openSans(
+              textStyle:
+                  ThemeData().textTheme.headlineLarge!.copyWith(color: blue)),
+          headlineMedium: GoogleFonts.openSans(
+              textStyle:
+                  ThemeData().textTheme.headlineLarge!.copyWith(color: blue)),
+          titleLarge: GoogleFonts.openSans(
+              textStyle:
+                  ThemeData().textTheme.titleLarge!.copyWith(color: blue)),
+          titleMedium: GoogleFonts.openSans(
+              textStyle:
+                  ThemeData().textTheme.headlineLarge!.copyWith(color: blue)),
+          titleSmall: GoogleFonts.openSans(
+              textStyle:
+                  ThemeData().textTheme.headlineLarge!.copyWith(color: blue)),
+          bodyLarge: GoogleFonts.openSans(
+              textStyle:
+                  ThemeData().textTheme.titleLarge!.copyWith(color: blue)),
+          bodyMedium: GoogleFonts.openSans(
+              textStyle:
+                  ThemeData().textTheme.titleLarge!.copyWith(color: blue)),
+          bodySmall: GoogleFonts.openSans(
+              textStyle:
+                  ThemeData().textTheme.titleLarge!.copyWith(color: blue)),
+          labelLarge: GoogleFonts.openSans(
+              textStyle:
+                  ThemeData().textTheme.titleLarge!.copyWith(color: blue)),
+          labelMedium: GoogleFonts.openSans(
+              textStyle:
+                  ThemeData().textTheme.titleLarge!.copyWith(color: blue)),
+          labelSmall: GoogleFonts.openSans(
+              textStyle:
+                  ThemeData().textTheme.titleLarge!.copyWith(color: blue)),
         ),
     scaffoldBackgroundColor: background,
     tabBarTheme: TabBarTheme(
