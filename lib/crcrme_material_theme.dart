@@ -171,7 +171,7 @@ ThemeData get crcrmeMaterialTheme {
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))),
             side: MaterialStateProperty.all(
                 const BorderSide(color: blue, width: 2)),
-            minimumSize: MaterialStateProperty.all(const Size(40, 45)),
+            minimumSize: MaterialStateProperty.all(const Size(40, 40)),
             maximumSize: MaterialStateProperty.all(const Size(250, 45)),
             padding: MaterialStateProperty.all(
                 const EdgeInsets.symmetric(horizontal: 20)),
