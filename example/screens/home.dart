@@ -76,9 +76,9 @@ class _HomeState extends State<Home> {
                         canTapOnHeader: true,
                         headerBuilder: (BuildContext context, bool open) =>
                             const Text('Expansion Panel List'),
-                        body: Row(
+                        body: const Row(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
+                          children: [
                             Chip(label: Text('Chip 1')),
                             Chip(label: Text('Chip 2')),
                             Chip(label: Text('Chip 3'))
@@ -86,13 +86,13 @@ class _HomeState extends State<Home> {
                         ))
                   ]),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
               child: Card(
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: EdgeInsets.all(8.0),
                   child: Column(
-                    children: const [
+                    children: [
                       Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Text('Card'),

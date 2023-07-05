@@ -57,8 +57,8 @@ class DialogShowcase extends StatelessWidget {
                         label: 'Annuler',
                         onPressed: () {},
                       ),
-                      content: Row(
-                        children: const [
+                      content: const Row(
+                        children: [
                           Padding(
                             padding: EdgeInsets.all(8.0),
                             child: Icon(Icons.check),
