@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 const Color white = Color(0xFFFFFFFF);
 const Color black = Color(0xFF1c0f13);
 const Color gray = Color(0xFF3D424A);
-const Color disabled = Color(0xFF9CA1AA);
+const Color disabled = gray;
 const Color blue = Color(0xFF357a97);
 const Color orange = Color(0xFFC75205);
 const Color background = Color(0xFFFAFAFA);
