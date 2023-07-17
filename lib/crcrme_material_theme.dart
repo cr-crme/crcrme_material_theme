@@ -153,16 +153,16 @@ ThemeData get crcrmeMaterialTheme {
             elevation: MaterialStateProperty.all(4))),
     textButtonTheme: TextButtonThemeData(
         style: ButtonStyle(
-      foregroundColor: MaterialStateProperty.all(white),
-      backgroundColor: MaterialStateProperty.all(blue),
-      shape: MaterialStateProperty.all(
-          RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))),
-      minimumSize: MaterialStateProperty.all(const Size(40, 40)),
-      maximumSize: MaterialStateProperty.all(const Size(250, 40)),
-      padding:
-          MaterialStateProperty.all(const EdgeInsets.symmetric(horizontal: 20)),
-      elevation: MaterialStateProperty.all(2),
-    )),
+            foregroundColor: MaterialStateProperty.all(white),
+            backgroundColor: MaterialStateProperty.all(blue),
+            shape: MaterialStateProperty.all(
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))),
+            minimumSize: MaterialStateProperty.all(const Size(40, 40)),
+            maximumSize: MaterialStateProperty.all(const Size(250, 60)),
+            padding: MaterialStateProperty.all(
+                const EdgeInsets.symmetric(horizontal: 20)),
+            elevation: MaterialStateProperty.all(2),
+            alignment: Alignment.center)),
     outlinedButtonTheme: OutlinedButtonThemeData(
         style: ButtonStyle(
             foregroundColor: MaterialStateProperty.all(blue),
