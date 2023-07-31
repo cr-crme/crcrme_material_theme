@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 const Color white = Color(0xFFFFFFFF);
 const Color black = Color(0xFF1c0f13);
 const Color gray = Color(0xFF3D424A);
-const Color disabled = Colors.grey;
+const Color disabled = gray;
 const Color blue = Color(0xFF357a97);
 const Color orange = Color(0xFFC75205);
 const Color background = Color(0xFFFAFAFA);
@@ -63,7 +63,7 @@ ThemeData get crcrmeMaterialTheme {
               textStyle: ThemeData()
                   .textTheme
                   .titleSmall!
-                  .copyWith(fontWeight: FontWeight.w600)),
+                  .copyWith(fontWeight: FontWeight.w600, fontSize: 14)),
           bodyLarge: GoogleFonts.openSans(
               textStyle: ThemeData()
                   .textTheme
@@ -73,7 +73,7 @@ ThemeData get crcrmeMaterialTheme {
               textStyle: ThemeData()
                   .textTheme
                   .bodyMedium!
-                  .copyWith(fontWeight: FontWeight.w400)),
+                  .copyWith(fontWeight: FontWeight.w400, fontSize: 14)),
           bodySmall: GoogleFonts.openSans(
               textStyle: ThemeData()
                   .textTheme
@@ -119,7 +119,7 @@ ThemeData get crcrmeMaterialTheme {
       checkColor: MaterialStateProperty.all(white),
       fillColor: MaterialStateProperty.resolveWith(
         (states) {
-          if (states.contains(MaterialState.disabled)) return disabled;
+          if (states.contains(MaterialState.disabled)) return Colors.grey;
           return blue;
         },
       ),
