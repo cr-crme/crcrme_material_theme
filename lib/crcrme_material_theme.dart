@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 const Color white = Color(0xFFFFFFFF);
 const Color black = Color(0xFF1c0f13);
 const Color gray = Color(0xFF3D424A);
-const Color disabled = gray;
+const Color disabled = Colors.grey;
 const Color blue = Color(0xFF357a97);
 const Color orange = Color(0xFFC75205);
 const Color background = Color(0xFFFAFAFA);
@@ -116,8 +116,14 @@ ThemeData get crcrmeMaterialTheme {
     dividerTheme: const DividerThemeData(
         color: orange, thickness: 1, indent: 10, endIndent: 10, space: 30),
     checkboxTheme: CheckboxThemeData(
-        checkColor: MaterialStateProperty.all(white),
-        fillColor: MaterialStateProperty.all(blue)),
+      checkColor: MaterialStateProperty.all(white),
+      fillColor: MaterialStateProperty.resolveWith(
+        (states) {
+          if (states.contains(MaterialState.disabled)) return disabled;
+          return blue;
+        },
+      ),
+    ),
     radioTheme: RadioThemeData(fillColor: MaterialStateProperty.all(blue)),
     switchTheme: SwitchThemeData(
       thumbColor: MaterialStateProperty.resolveWith((states) =>
