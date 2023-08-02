@@ -164,7 +164,7 @@ ThemeData get crcrmeMaterialTheme {
             shape: MaterialStateProperty.all(
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))),
             minimumSize: MaterialStateProperty.all(const Size(40, 40)),
-            maximumSize: MaterialStateProperty.all(const Size(250, 60)),
+            maximumSize: MaterialStateProperty.all(const Size(250, 100)),
             padding: MaterialStateProperty.all(
                 const EdgeInsets.symmetric(horizontal: 20)),
             elevation: MaterialStateProperty.all(2),
