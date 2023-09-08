@@ -119,8 +119,13 @@ ThemeData get crcrmeMaterialTheme {
       checkColor: MaterialStateProperty.all(white),
       fillColor: MaterialStateProperty.resolveWith(
         (states) {
-          if (states.contains(MaterialState.disabled)) return Colors.grey;
-          return blue;
+          if (states.contains(MaterialState.disabled)) {
+            return Colors.grey;
+          } else if (states.contains(MaterialState.selected)) {
+            return blue;
+          } else {
+            return white;
+          }
         },
       ),
     ),
