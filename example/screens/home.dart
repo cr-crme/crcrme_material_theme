@@ -67,7 +67,7 @@ class _HomeState extends State<Home> {
               child: ExpansionPanelList(
                   expansionCallback: (int panelIndex, bool isExpanded) {
                     setState(() {
-                      expansionPanel = !isExpanded;
+                      expansionPanel = isExpanded;
                     });
                   },
                   children: [
