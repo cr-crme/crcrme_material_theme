@@ -95,7 +95,11 @@ ThemeData get crcrmeMaterialTheme {
                   .labelSmall!
                   .copyWith(fontWeight: FontWeight.w400)),
         ),
+    cardTheme: CardTheme(surfaceTintColor: Colors.grey[100]!),
+    dialogTheme: const DialogTheme(surfaceTintColor: white),
     scaffoldBackgroundColor: background,
+    appBarTheme:
+        const AppBarTheme(backgroundColor: blue, foregroundColor: Colors.white),
     tabBarTheme: TabBarTheme(
       labelColor: white,
       indicator: const UnderlineTabIndicator(
@@ -117,6 +121,7 @@ ThemeData get crcrmeMaterialTheme {
         color: orange, thickness: 1, indent: 10, endIndent: 10, space: 30),
     checkboxTheme: CheckboxThemeData(
       checkColor: MaterialStateProperty.all(white),
+      side: const BorderSide(color: blue, width: 2),
       fillColor: MaterialStateProperty.resolveWith(
         (states) {
           if (states.contains(MaterialState.disabled)) {
@@ -137,7 +142,13 @@ ThemeData get crcrmeMaterialTheme {
           states.contains(MaterialState.selected)
               ? blue.withAlpha(100)
               : disabled.withAlpha(80)),
+      trackOutlineColor: MaterialStateProperty.all(Colors.transparent),
     ),
+    // listTileTheme: ListTileThemeData(
+    //   titleTextStyle: GoogleFonts.openSans(
+    //       textStyle: ThemeData().textTheme.titleMedium!.copyWith(
+    //           fontWeight: FontWeight.w600, color: Colors.black, fontSize: 16)),
+    // ),
     sliderTheme: SliderThemeData(
         thumbColor: blue,
         activeTrackColor: blue.withAlpha(100),
@@ -155,6 +166,7 @@ ThemeData get crcrmeMaterialTheme {
             textStyle: MaterialStateProperty.all(const TextStyle(fontSize: 20)),
             foregroundColor: MaterialStateProperty.all(white),
             backgroundColor: MaterialStateProperty.all(orange),
+            surfaceTintColor: MaterialStateProperty.all(white),
             shape: MaterialStateProperty.all(RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12))),
             minimumSize: MaterialStateProperty.all(const Size(60, 60)),
@@ -166,6 +178,7 @@ ThemeData get crcrmeMaterialTheme {
         style: ButtonStyle(
             foregroundColor: MaterialStateProperty.all(white),
             backgroundColor: MaterialStateProperty.all(blue),
+            surfaceTintColor: MaterialStateProperty.all(white),
             shape: MaterialStateProperty.all(
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))),
             minimumSize: MaterialStateProperty.all(const Size(40, 40)),
@@ -178,6 +191,7 @@ ThemeData get crcrmeMaterialTheme {
         style: ButtonStyle(
             foregroundColor: MaterialStateProperty.all(blue),
             backgroundColor: MaterialStateProperty.all(blue.withAlpha(15)),
+            surfaceTintColor: MaterialStateProperty.all(white),
             shape: MaterialStateProperty.all(
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))),
             side: MaterialStateProperty.all(
