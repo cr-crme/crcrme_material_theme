@@ -11,6 +11,12 @@ const Color background = Color(0xFFFAFAFA);
 const Color error = Color(0xFFF62828);
 
 ThemeData get crcrmeMaterialTheme {
+  final titleMedium = GoogleFonts.openSans(
+      textStyle: ThemeData()
+          .textTheme
+          .titleMedium!
+          .copyWith(fontWeight: FontWeight.w600));
+
   return ThemeData(
     brightness: Brightness.light,
     colorScheme: const ColorScheme(
@@ -54,11 +60,7 @@ ThemeData get crcrmeMaterialTheme {
                   .textTheme
                   .headlineMedium!
                   .copyWith(fontWeight: FontWeight.w600)),
-          titleMedium: GoogleFonts.openSans(
-              textStyle: ThemeData()
-                  .textTheme
-                  .titleMedium!
-                  .copyWith(fontWeight: FontWeight.w600)),
+          titleMedium: titleMedium,
           titleSmall: GoogleFonts.openSans(
               textStyle: ThemeData()
                   .textTheme
@@ -144,11 +146,10 @@ ThemeData get crcrmeMaterialTheme {
               : disabled.withAlpha(80)),
       trackOutlineColor: MaterialStateProperty.all(Colors.transparent),
     ),
-    // listTileTheme: ListTileThemeData(
-    //   titleTextStyle: GoogleFonts.openSans(
-    //       textStyle: ThemeData().textTheme.titleMedium!.copyWith(
-    //           fontWeight: FontWeight.w600, color: Colors.black, fontSize: 16)),
-    // ),
+    listTileTheme: ListTileThemeData(
+      titleTextStyle: titleMedium.copyWith(
+          fontWeight: FontWeight.w600, color: Colors.black, fontSize: 16),
+    ),
     sliderTheme: SliderThemeData(
         thumbColor: blue,
         activeTrackColor: blue.withAlpha(100),
