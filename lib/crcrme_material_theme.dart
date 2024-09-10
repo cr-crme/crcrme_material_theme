@@ -27,10 +27,8 @@ ThemeData get crcrmeMaterialTheme {
       onSecondary: white,
       error: error,
       onError: white,
-      background: background,
-      onBackground: black,
-      surface: white,
       onSurface: black,
+      surface: white,
     ),
     primaryColor: blue,
     disabledColor: disabled,
@@ -122,13 +120,13 @@ ThemeData get crcrmeMaterialTheme {
     dividerTheme: const DividerThemeData(
         color: orange, thickness: 1, indent: 10, endIndent: 10, space: 30),
     checkboxTheme: CheckboxThemeData(
-      checkColor: MaterialStateProperty.all(white),
+      checkColor: WidgetStateProperty.all(white),
       side: const BorderSide(color: blue, width: 2),
-      fillColor: MaterialStateProperty.resolveWith(
+      fillColor: WidgetStateProperty.resolveWith(
         (states) {
-          if (states.contains(MaterialState.disabled)) {
+          if (states.contains(WidgetState.disabled)) {
             return Colors.grey;
-          } else if (states.contains(MaterialState.selected)) {
+          } else if (states.contains(WidgetState.selected)) {
             return blue;
           } else {
             return white;
@@ -136,15 +134,15 @@ ThemeData get crcrmeMaterialTheme {
         },
       ),
     ),
-    radioTheme: RadioThemeData(fillColor: MaterialStateProperty.all(blue)),
+    radioTheme: RadioThemeData(fillColor: WidgetStateProperty.all(blue)),
     switchTheme: SwitchThemeData(
-      thumbColor: MaterialStateProperty.resolveWith((states) =>
-          states.contains(MaterialState.selected) ? blue : disabled),
-      trackColor: MaterialStateProperty.resolveWith((states) =>
-          states.contains(MaterialState.selected)
+      thumbColor: WidgetStateProperty.resolveWith(
+          (states) => states.contains(WidgetState.selected) ? blue : disabled),
+      trackColor: WidgetStateProperty.resolveWith((states) =>
+          states.contains(WidgetState.selected)
               ? blue.withAlpha(100)
               : disabled.withAlpha(80)),
-      trackOutlineColor: MaterialStateProperty.all(Colors.transparent),
+      trackOutlineColor: WidgetStateProperty.all(Colors.transparent),
     ),
     listTileTheme: ListTileThemeData(
       titleTextStyle: titleMedium.copyWith(
@@ -164,44 +162,44 @@ ThemeData get crcrmeMaterialTheme {
         labelStyle: TextStyle(color: white, fontWeight: FontWeight.w600)),
     elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
-            textStyle: MaterialStateProperty.all(const TextStyle(fontSize: 20)),
-            foregroundColor: MaterialStateProperty.all(white),
-            backgroundColor: MaterialStateProperty.all(orange),
-            surfaceTintColor: MaterialStateProperty.all(white),
-            shape: MaterialStateProperty.all(RoundedRectangleBorder(
+            textStyle: WidgetStateProperty.all(const TextStyle(fontSize: 20)),
+            foregroundColor: WidgetStateProperty.all(white),
+            backgroundColor: WidgetStateProperty.all(orange),
+            surfaceTintColor: WidgetStateProperty.all(white),
+            shape: WidgetStateProperty.all(RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12))),
-            minimumSize: MaterialStateProperty.all(const Size(60, 60)),
-            maximumSize: MaterialStateProperty.all(const Size(350, 60)),
-            padding: MaterialStateProperty.all(
+            minimumSize: WidgetStateProperty.all(const Size(60, 60)),
+            maximumSize: WidgetStateProperty.all(const Size(350, 60)),
+            padding: WidgetStateProperty.all(
                 const EdgeInsets.symmetric(horizontal: 40)),
-            elevation: MaterialStateProperty.all(4))),
+            elevation: WidgetStateProperty.all(4))),
     textButtonTheme: TextButtonThemeData(
         style: ButtonStyle(
-            foregroundColor: MaterialStateProperty.all(white),
-            backgroundColor: MaterialStateProperty.all(blue),
-            surfaceTintColor: MaterialStateProperty.all(white),
-            shape: MaterialStateProperty.all(
+            foregroundColor: WidgetStateProperty.all(white),
+            backgroundColor: WidgetStateProperty.all(blue),
+            surfaceTintColor: WidgetStateProperty.all(white),
+            shape: WidgetStateProperty.all(
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))),
-            minimumSize: MaterialStateProperty.all(const Size(40, 40)),
-            maximumSize: MaterialStateProperty.all(const Size(250, 100)),
-            padding: MaterialStateProperty.all(
+            minimumSize: WidgetStateProperty.all(const Size(40, 40)),
+            maximumSize: WidgetStateProperty.all(const Size(250, 100)),
+            padding: WidgetStateProperty.all(
                 const EdgeInsets.symmetric(horizontal: 20)),
-            elevation: MaterialStateProperty.all(2),
+            elevation: WidgetStateProperty.all(2),
             alignment: Alignment.center)),
     outlinedButtonTheme: OutlinedButtonThemeData(
         style: ButtonStyle(
-            foregroundColor: MaterialStateProperty.all(blue),
-            backgroundColor: MaterialStateProperty.all(blue.withAlpha(15)),
-            surfaceTintColor: MaterialStateProperty.all(white),
-            shape: MaterialStateProperty.all(
+            foregroundColor: WidgetStateProperty.all(blue),
+            backgroundColor: WidgetStateProperty.all(blue.withAlpha(15)),
+            surfaceTintColor: WidgetStateProperty.all(white),
+            shape: WidgetStateProperty.all(
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))),
-            side: MaterialStateProperty.all(
+            side: WidgetStateProperty.all(
                 const BorderSide(color: blue, width: 2)),
-            minimumSize: MaterialStateProperty.all(const Size(40, 40)),
-            maximumSize: MaterialStateProperty.all(const Size(250, 45)),
-            padding: MaterialStateProperty.all(
+            minimumSize: WidgetStateProperty.all(const Size(40, 40)),
+            maximumSize: WidgetStateProperty.all(const Size(250, 45)),
+            padding: WidgetStateProperty.all(
                 const EdgeInsets.symmetric(horizontal: 20)),
-            elevation: MaterialStateProperty.all(0))),
+            elevation: WidgetStateProperty.all(0))),
     floatingActionButtonTheme:
         const FloatingActionButtonThemeData(foregroundColor: white),
   );
