@@ -95,12 +95,12 @@ ThemeData get crcrmeMaterialTheme {
                   .labelSmall!
                   .copyWith(fontWeight: FontWeight.w400)),
         ),
-    cardTheme: CardTheme(surfaceTintColor: Colors.grey[100]!),
-    dialogTheme: const DialogTheme(surfaceTintColor: white),
+    cardTheme: CardThemeData(surfaceTintColor: Colors.grey[100]!),
+    dialogTheme: const DialogThemeData(surfaceTintColor: white),
     scaffoldBackgroundColor: background,
     appBarTheme:
         const AppBarTheme(backgroundColor: blue, foregroundColor: Colors.white),
-    tabBarTheme: TabBarTheme(
+    tabBarTheme: TabBarThemeData(
       labelColor: white,
       indicator: const UnderlineTabIndicator(
         borderSide: BorderSide(
