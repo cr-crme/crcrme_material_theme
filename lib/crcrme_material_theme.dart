@@ -164,7 +164,8 @@ ThemeData get crcrmeMaterialTheme {
         style: ButtonStyle(
             textStyle: WidgetStateProperty.all(const TextStyle(fontSize: 20)),
             foregroundColor: WidgetStateProperty.all(white),
-            backgroundColor: WidgetStateProperty.all(orange),
+            backgroundColor: WidgetStateProperty.resolveWith((states) =>
+                states.contains(WidgetState.disabled) ? gray : orange),
             surfaceTintColor: WidgetStateProperty.all(white),
             shape: WidgetStateProperty.all(RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12))),
