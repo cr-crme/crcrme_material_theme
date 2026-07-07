@@ -16,6 +16,7 @@ ThemeData get crcrmeMaterialTheme {
           .textTheme
           .titleMedium!
           .copyWith(fontWeight: FontWeight.w600));
+  const pageTransition = _CrcrmeTransitionBuilder();
 
   return ThemeData(
     brightness: Brightness.light,
@@ -203,5 +204,30 @@ ThemeData get crcrmeMaterialTheme {
             elevation: WidgetStateProperty.all(0))),
     floatingActionButtonTheme:
         const FloatingActionButtonThemeData(foregroundColor: white),
+    pageTransitionsTheme: const PageTransitionsTheme(
+      builders: {
+        TargetPlatform.android: pageTransition,
+        TargetPlatform.fuchsia: pageTransition,
+        TargetPlatform.iOS: pageTransition,
+        TargetPlatform.linux: pageTransition,
+        TargetPlatform.macOS: pageTransition,
+        TargetPlatform.windows: pageTransition,
+      },
+    ),
   );
+}
+
+class _CrcrmeTransitionBuilder extends PageTransitionsBuilder {
+  const _CrcrmeTransitionBuilder();
+
+  @override
+  Widget buildTransitions<T>(
+    PageRoute<T> route,
+    BuildContext context,
+    Animation<double> animation,
+    Animation<double> secondaryAnimation,
+    Widget child,
+  ) {
+    return child;
+  }
 }
